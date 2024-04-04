@@ -1,16 +1,17 @@
-* 2) İlk isminde adları Ed, Nick ve Jennifer olan aktörün sadece soyadını gösterin. 
+### 2) İlk isminde adları Ed, Nick ve Jennifer olan aktörün sadece soyadını gösterin.
 
-´´´sql
+
+```sql
 SELECT last_name
 
 FROM public.actor
 
 WHERE first_name IN ('Nick', 'Ed', 'Jennifer');
-´´´
+```
 
-* 6) Envanter tablosu ve rental tablosundan oluşan ilk 5 satırı gösterin. 
+### 6) Envanter tablosu ve rental tablosundan oluşan ilk 5 satırı gösterin. 
 
-´´´sql
+```sql
 --SELECT * FROM public.inventory 
 
 --UNION ALL
@@ -21,11 +22,11 @@ SELECT *
 FROM inventory 
 JOIN rental ON inventory.inventory_id = rental.inventory_id
 LIMIT 5;
-´´´
+```
 
-* 10) Film tablosunda boş olmayan satırların sayısını bulunuz.
+### 10) Film tablosunda boş olmayan satırların sayısını bulunuz.
 
- ´´´sql
+ ```sql
  SELECT COUNT(*) FROM public.film WHERE description IS NOT NULL;
- ´´´
+ ```
 
